@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  # get 'session/new'
+  get "signup" => "signup#new"
+  post "signup" => "signup#create"
+
+  get "login" => "session#new"
+	post "login" => "session#create"
+	delete "logout" => "session#destroy"
+
 	root 'main#index'
 
 	get 'auth/logout' => 'auth#logout'
