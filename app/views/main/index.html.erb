@@ -1,0 +1,7 @@
+<h1>Home</h1>
+
+<button><%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %></button>
+
+<div class="current-user">
+Current User: <%= @current_user.inspect %>
+</div>
